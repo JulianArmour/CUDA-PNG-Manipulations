@@ -13,18 +13,18 @@ __global__ void pool(unsigned char output_image[], const unsigned char image[], 
   int x_out = pixel_out - y_out * width_out;
   // pixel index of the input image. Each output pixel is mapped to the the first 2x2 pixel block of the input image.
   int pixel_in = (y_out * width_out * 4 + x_out * 2) * 4;
-  printf("Pixel_in = %d  y_out = %d  x_out = %d\n", pixel_in, y_out, x_out);
+  //printf("Pixel_in = %d  y_out = %d  x_out = %d\n", pixel_in, y_out, x_out);
   if (index_out >= width_out * height_out * 4) return;
 
   // look at each pixel value in the 2x2 pixel block, choose the largest value.
-  int max = image[pixel_in + threadIdx.z];
-  //for (int i = 0; i < 2; i++) {
-  //  for (int j = 0; j < 2; j++) {
-  //    int val = image[pixel_in + 4 * i + 8 * width_out * j + threadIdx.z];
-  //    if (val > max)
-  //      max = val;
-  //  }
-  //}
+  int max = 0;
+  for (int i = 0; i < 2; i++) {
+    for (int j = 0; j < 2; j++) {
+      int val = image[pixel_in + 4 * i + 8 * width_out * j + threadIdx.z];
+      if (val > max)
+        max = val;
+    }
+  }
 
   output_image[index_out] = max;
 }

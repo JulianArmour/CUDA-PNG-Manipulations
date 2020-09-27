@@ -95,6 +95,9 @@
     <ClInclude Include="lodepng.h" />
   </ItemGroup>
   <ItemGroup>
+    <CudaCompile Include="test_equality.c">
+      <FileType>CppCode</FileType>
+    </CudaCompile>
     <CudaCompile Include="lodepng.cu">
       <FileType>CppCode</FileType>
     </CudaCompile>
