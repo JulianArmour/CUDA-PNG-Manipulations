@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.30503.244
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "420-lab-0", "420-lab-0\420-lab-0.vcxproj", "{2D751465-2E0E-4B68-BDB9-23B173D29FB6}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "420-lab-0-rectification", "420-lab-0-rectification\420-lab-0-rectification.vcxproj", "{951D9616-0F5D-434F-9142-F903A6114603}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -19,6 +21,12 @@ Global
 		{2D751465-2E0E-4B68-BDB9-23B173D29FB6}.Release|x64.ActiveCfg = Release|x64
 		{2D751465-2E0E-4B68-BDB9-23B173D29FB6}.Release|x64.Build.0 = Release|x64
 		{2D751465-2E0E-4B68-BDB9-23B173D29FB6}.Release|x86.ActiveCfg = Release|x64
+		{951D9616-0F5D-434F-9142-F903A6114603}.Debug|x64.ActiveCfg = Debug|x64
+		{951D9616-0F5D-434F-9142-F903A6114603}.Debug|x64.Build.0 = Debug|x64
+		{951D9616-0F5D-434F-9142-F903A6114603}.Debug|x86.ActiveCfg = Debug|x64
+		{951D9616-0F5D-434F-9142-F903A6114603}.Release|x64.ActiveCfg = Release|x64
+		{951D9616-0F5D-434F-9142-F903A6114603}.Release|x64.Build.0 = Release|x64
+		{951D9616-0F5D-434F-9142-F903A6114603}.Release|x86.ActiveCfg = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
