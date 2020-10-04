@@ -42,7 +42,10 @@ int main(int argc, char** argv) {
   unsigned int width, height;
 
   unsigned int error = lodepng_decode32_file((unsigned char**)&old_image, &width, &height, input_name);
-  if(error) printf("error %u: %s\n", error, lodepng_error_text(error));
+  if (error) {
+    printf("error %u: %s\n", error, lodepng_error_text(error));
+    exit(-1);
+  }
 
   cudaMalloc((void**)&d_old_image, width * height * 4 * sizeof(unsigned char));
   cudaMemcpy((void*)d_old_image, (void*)old_image, width * height * 4 * sizeof(unsigned char), cudaMemcpyHostToDevice);
